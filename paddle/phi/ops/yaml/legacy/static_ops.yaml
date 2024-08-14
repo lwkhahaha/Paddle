@@ -16,6 +16,7 @@
   kernel :
     func : all_reduce
     param: [x, reduce_type]
+  interfaces : paddle::dialect::InferSymbolicShapeInterface
 
 - op : all_to_all
   args : (Tensor x, int ring_id = 0)

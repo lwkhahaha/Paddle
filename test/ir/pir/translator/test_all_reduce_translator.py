@@ -41,6 +41,9 @@ class TestCAllReduceMinOpTranslator(test_op_translator.TestOpTranslator):
     def test_translator(self):
         self.check()
 
+    def test_check_output(self):
+        self.check_output(check_pir=True, check_symbol_infer=True)
+
 
 if __name__ == "__main__":
     unittest.main()
