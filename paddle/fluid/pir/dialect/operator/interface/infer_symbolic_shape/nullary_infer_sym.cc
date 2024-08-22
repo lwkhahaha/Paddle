@@ -245,7 +245,6 @@ bool FeedOpInferSymbolicShape(pir::Operation *op,
 bool FullOpInferSymbolicShape(pir::Operation *op,
                               pir::InferSymbolicShapeContext *infer_context) {
   const auto &attributes = op->attributes();
-  const int a = 1;
   const std::vector<symbol::DimExpr> shape = [&] {
     pir::Attribute attr_shape = attributes.at("shape");
     const auto &shape_vec =
